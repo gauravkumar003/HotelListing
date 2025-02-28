@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply overflow-x-hidden;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+  }
+  body {
+    @apply antialiased overflow-x-hidden;
+    background-color: #FBFBFE;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: max(14px, min(18px, 4vw));
+  }
+}
+
+/* Custom color variables */
+:root {
+  --color-primary: #1e3c7b;
+  --color-secondary: #2a4c8b;
+  --color-accent: #4267b2;
+  --color-success: #2e7d32;
+  --color-warning: #ed6c02;
+  --color-danger: #d32f2f;
+  --color-info: #0288d1;
+  --color-background: #FBFBFE;
+  --color-surface: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-secondary: #666666;
+}
+
+.writing-mode-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
